@@ -2,8 +2,7 @@
 
 # DB-System starten
 cd '/usr' && /usr/bin/mysqld_safe --datadir='/var/lib/mysql' &
-sleep 5
-mysql_upgrade -uroot
+while (! mysql_upgrade -uroot); do sleep 1; done
 
-# docker run -dit -p 8000:80 deepwiki apachectl -DFOREGROUND
+# Apache im Vordergrund starten
 apachectl -DFOREGROUND
