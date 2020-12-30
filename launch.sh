@@ -10,6 +10,7 @@ while (true); do
     --name $CONTAINER_NAME \
     -p $PORT:80 \
     deepwiki ./start.sh
+  echo "restarting docker container in 2 seconds"
   sleep 2
 done
 

@@ -2,7 +2,9 @@
 
 # DB-System starten
 cd '/usr' && /usr/bin/mysqld_safe --datadir='/var/lib/mysql' &
+sleep 2
 while (! mysql_upgrade -uroot); do sleep 1; done
+php /usr/share/webapps/mediawiki/maintenance/update.php
 
 # Apache im Vordergrund starten
 while (true); do
