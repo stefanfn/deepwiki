@@ -29,7 +29,7 @@ $wgSitename = "deepwiki";
 $wgScriptPath = "/wiki";
 
 ## The protocol and server name to use in fully-qualified URLs
-$wgServer = "http://wiki.coolmule.de";
+$wgServer = "http://wiki.coolmule.de:45516";
 
 ## The URL path to static resources (images, scripts, etc.)
 $wgResourceBasePath = $wgScriptPath;
