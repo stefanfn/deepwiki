@@ -129,3 +129,5 @@ wfLoadSkin( 'Vector' );
 # End of automatically generated settings.
 # Add more configuration options below.
 
+$wgGroupPermissions['*']['read'] = false;
+

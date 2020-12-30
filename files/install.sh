@@ -10,10 +10,9 @@ chown -R mysql:mysql /var/lib/mysql
 mv -v httpd.conf /etc/httpd/conf/
 mv -v php.ini /etc/php/
 mv -v mediawiki.conf /etc/httpd/conf/extra/
-mv -v htpasswd /etc/httpd/.htpasswd
 
 # Mediawiki konfigurieren
-mv -v LocalSettings.php /usr/share/webapps/mediawiki/
-mv -v ds9_logo.jpeg /usr/share/webapps/mediawiki/resources/assets/
-mv -v htaccess /usr/share/webapps/mediawiki/.htaccess
+ln -s /usr/share/webapps/mediawiki
+[ -f LocalSettings.php ] && mv -v LocalSettings.php mediawiki/
+mv -v ds9_logo.jpeg mediawiki/resources/assets/
 
