@@ -1,4 +1,4 @@
 #!/bin/bash
 
-docker build -t deepwiki .
+docker build -t $(basename $(pwd)) .
 

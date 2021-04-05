@@ -4,7 +4,7 @@
 cd '/usr' && /usr/bin/mysqld_safe --datadir='/var/lib/mysql' &
 sleep 2
 while (! mysql_upgrade -uroot); do sleep 1; done
-php /usr/share/webapps/mediawiki/maintenance/update.php
+php7 /usr/share/webapps/mediawiki/maintenance/update.php || exit 1
 
 # Apache im Vordergrund starten
 while (true); do

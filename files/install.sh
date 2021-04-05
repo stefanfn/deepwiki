@@ -7,8 +7,10 @@ rm -rf mysql.tar.bz
 chown -R mysql:mysql /var/lib/mysql
 
 # Apache konfigurieren
+ln -s php7 /etc/php || exit 0
+ln -s php7 /usr/lib/php || exit 0
 mv -v httpd.conf /etc/httpd/conf/
-mv -v php.ini /etc/php/
+mv -v php.ini /etc/php/ || exit 0
 mv -v mediawiki.conf /etc/httpd/conf/extra/
 
 # Mediawiki konfigurieren
